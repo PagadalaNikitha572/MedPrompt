@@ -5,7 +5,12 @@ import nltk
 import os
 
 # Ensure tokenizer is available
-nltk.download("punkt")
+
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
+
 
 class BM25Retriever:
     def __init__(self, corpus_path="data/corpus.txt"):

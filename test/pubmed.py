@@ -1,4 +1,4 @@
-# build_corpus.py
+# pubmed.py
 
 from Bio import Entrez
 import time

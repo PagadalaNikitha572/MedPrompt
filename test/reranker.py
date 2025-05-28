@@ -1,4 +1,4 @@
-# drag.py
+# reranker.py
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 
