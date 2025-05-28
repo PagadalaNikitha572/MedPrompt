@@ -1,4 +1,6 @@
 import streamlit as st
+import nltk
+nltk.download('punkt')
 
 # Import your custom pipeline functions
 from ner import recognize_entities
@@ -11,7 +13,7 @@ from ans import generate_answer  # ✅ Step 5 import
 st.set_page_config(page_title="MedPrompt", layout="wide")
 
 # Title for the application
-st.title("🧠 MedPrompt: Clinical Text to Structured Output")
+st.title("🧠 MedPrompt: Care Coordination and Pathways for Patients using Digital Information ")
 st.markdown("Enter unstructured clinical notes below and click **Proceed** to view structured insights.")
 
 # User input section
