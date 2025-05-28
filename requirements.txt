@@ -1,5 +1,6 @@
 transformers
-datasets
 torch
-pandas
+streamlit
 nltk
+rank_bm25
+biopython
