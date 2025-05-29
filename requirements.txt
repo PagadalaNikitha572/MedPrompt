@@ -1,8 +1,7 @@
 transformers
 torch
-
 streamlit
 matplotlib
 pandas
 numpy
-# add other packages your app uses
+seaborn
