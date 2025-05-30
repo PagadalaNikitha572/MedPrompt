@@ -23,12 +23,19 @@ def clean_json_text(text: str) -> str:
     Cleans common issues in JSON text from LLM:
     - Remove JS-style comments
     - Remove trailing commas before } or ]
+    - Quote standalone percentages
     """
     # Remove // comments
     text = re.sub(r'//.*?\n', '\n', text)
+
     # Remove trailing commas in objects or arrays
     text = re.sub(r',(\s*[}\]])', r'\1', text)
+
+    # Quote unquoted percentages (e.g. 88% => "88%")
+    text = re.sub(r'(?<=:\s)(\d+%)', r'"\1"', text)
+
     return text
+
 
 
 def extract_combined(text, model="mistral"):
