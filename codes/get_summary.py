@@ -3,12 +3,9 @@ import subprocess
 def call_summary_llm(text, model="mistral"):
     prompt = f"""
 You are a clinical summarization assistant.
-
 Based on the following clinical note, generate a short, human-readable paragraph summary that captures the overall medical context, conditions, interventions, and recommendations.
-
 Text:
 \"\"\"{text}\"\"\"
-
 Summary:
 """
     result = subprocess.run(
